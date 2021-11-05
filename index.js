@@ -79,7 +79,8 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
-console.log('task 3: ', reviews[5].feedback)
+console.log("task 3: ", reviews[5].feedback);
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -99,8 +100,16 @@ Write a function that creates an object with name, rating, feedback, add the new
   3. The function should push the following object to the array: {name: 'Daniela', rating: 5, review: 'Beautiful atmosphere and wonderful vegan options!' }
   4. should return the resulting array
 */
-function addReview(){
+function addReview(array, name, rating, feedback){
+const newReview ={
+  name,
+  rating,
+  feedback
+}
 
+array.push(newReview);
+
+return array;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -137,7 +146,7 @@ function getLastReview(array) {
   return `${array[array.length -1].name} gave the restaurant a ${array[array.length -1].rating} star rating, and their feedback was: ${array[array.length -1].feedback}`;
 } 
 
-console.log('task 7: ', getLastReview(reviews));
+console.log('task 7: ', getLastReview(reviews))
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
